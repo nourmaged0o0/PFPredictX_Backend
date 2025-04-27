@@ -91,4 +91,4 @@ def after_request(response):
 if __name__ == "__main__":
     # Load model at startup
     load_the_model()
-    app.run(debug=True)
+    app.run(port=5000)
