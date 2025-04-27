@@ -3,6 +3,7 @@ from dashboard import startDashboard
 import pandas as pd
 from tensorflow.keras.models import load_model
 import numpy as np
+import os
 
 # Initialize Flask app
 app = Flask(__name__)
@@ -89,6 +90,6 @@ def after_request(response):
     return response
 
 if __name__ == "__main__":
-    # Load model at startup
     load_the_model()
-    app.run(port=5000)
+    port = int(os.environ.get("PORT", 5000))
+    app.run(host="0.0.0.0", port=port)

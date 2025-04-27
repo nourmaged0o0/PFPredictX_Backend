@@ -7,3 +7,4 @@ pandas
 plotly
 flask
 tensorflow==2.15
+gunicorn
